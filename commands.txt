@@ -8,3 +8,14 @@ cd ..
 cd ./reports && touch summary.md
 git add reports
 git commit -m Add reports directory
+cd ./reports
+touch {file1,file2,file3}.txt
+cd ..
+mkdir backup
+cp ./*.py ./backup
+cd ..
+cd ./docs
+touch .gitignore
+git add .&& git commit -m Add .gitignore file
+git checkout main
+git merge feature-update
